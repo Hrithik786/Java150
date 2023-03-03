@@ -115,9 +115,8 @@ public class Java150 {
             System.out.println("hy brada " + i );
 
         }
-        Scanner sc = new Scanner(System.in);
         System.out.println("please enter first alphabet");
-        char a = sc.next().charAt(0);
+        a = sc.next().charAt(0);
         if (a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u') {
             System.out.println("it is vowel");
         } else {
@@ -125,7 +124,7 @@ public class Java150 {
         }//27solved
 
         System.out.println("please enter 2 value :");
-        int n = sc.nextInt();
+        n = sc.nextInt();
         int n2 = sc.nextInt();
         System.out.println("before swapping " + n + "  " + n2 + "\n");
         int temp = n;
@@ -165,7 +164,7 @@ public class Java150 {
 //-------------------------------------------------------------
         System.out.println("please enter a value for n for sum");
         n = sc.nextInt();
-        int sum = 0;
+        sum = 0;
         for (int i = 1; i <= n; i++) {
             sum += i;
         }
@@ -249,7 +248,7 @@ public class Java150 {
         //-----------------------------------------------
         System.out.println("42  enter a no. for check wheater it is a prime or not");
         n=sc.nextInt();
-        int c=0;
+        c=0;
         for(int i=1;i<=n;i++){
             if(n%i==0)
                 c++;
@@ -312,7 +311,7 @@ public class Java150 {
             }
             default -> System.out.println("invalid input");
         }//52 solved
-        long n = 1401601499;
+        /*long n = 1401601499;
         long sum = 0;
         for (int i = 10; i>=1 ; i--) {
             sum = sum + n % 10 * i;
@@ -320,10 +319,10 @@ public class Java150 {
         }
         System.out.println(sum);
         System.out.println(sum%11==0?"Legal":"not legal");//26 solved
-
+*/
         //----------bijli -----pending
         int unit=200;
-        double amt =0;
+        amt =0;
         if (unit>400){
             amt=amt+(unit -400)*13;
             unit =400;
@@ -336,7 +335,7 @@ public class Java150 {
             amt=amt+(unit-100)*6;
             unit=100;
         }
-        amt=amt+unit*4.2;
+        amt=amt+unit*4;
         System.out.println("amt = "+amt);
     }
 } //24 solved
@@ -358,7 +357,3 @@ public class Java150 {
         int rem10 = rup % 10;
   */
 
-
-    }
-
-}
