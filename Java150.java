@@ -115,6 +115,203 @@ public class Java150 {
             System.out.println("hy brada " + i );
 
         }
+        Scanner sc = new Scanner(System.in);
+        System.out.println("please enter first alphabet");
+        char a = sc.next().charAt(0);
+        if (a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u') {
+            System.out.println("it is vowel");
+        } else {
+            System.out.println("consonant");
+        }//27solved
+
+        System.out.println("please enter 2 value :");
+        int n = sc.nextInt();
+        int n2 = sc.nextInt();
+        System.out.println("before swapping " + n + "  " + n2 + "\n");
+        int temp = n;
+        n = n2;
+        n2 = temp;
+        System.out.println("after swapping " + n + "  " + n2 + "\n");
+
+        temp = n + n2;
+        n2 = n;
+        n = Math.abs(n2 - temp);
+
+        System.out.println("after swapping " + n + "  " + n2 + "\n");//28 solved
+
+        System.out.println("please enter int for lopp n time");
+        n = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            System.out.println("hello " + n);
+        }//29 solved
+
+        System.out.println("please enter int where till want to print no.");
+        n = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            System.out.println("numbers= " + i);
+        }//30 solved
+
+
+        for (int i = n; i > 0; i--) {
+            System.out.println(" reversal numbers= " + i);
+        }// 31 solved
+        //----------------------------------------------------
+
+        System.out.println("Enter a No. for printing table:");
+        n = sc.nextInt();
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(n + " * " + i + " = " + (n * i));
+        }//32 solved
+//-------------------------------------------------------------
+        System.out.println("please enter a value for n for sum");
+        n = sc.nextInt();
+        int sum = 0;
+        for (int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        System.out.println(sum);//33 solved
+
+        System.out.println("please enter a value factorial");
+        n = sc.nextInt();
+        int fact = 1;
+        for (int i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+        System.out.println(fact);//34 solved
+        //-----------------------------------------------------------
+
+        System.out.println("please enter value for sum of odd n even");
+        n = sc.nextInt();
+        int sumo = 0, sume = 0;
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 0)
+                sume = sume + i;
+            else if (i % 2 == 1)
+                sumo = sumo + i;
+        }
+        System.out.println("sum of odd" + sumo);
+        System.out.println("sum of even" + sume); //35 solved
+//-----------------------------------------------
+        System.out.println("please Enter value for 3 or 5 divisibility");
+        n = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 || i % 5 == 0)
+                System.out.println(i);
+        }//36 solved
+
+        System.out.println("enter a value for factors");
+        n = sc.nextInt();
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0)
+                System.out.println(i);
+        }//37 solved
+        System.out.println("enter a sum of ranged factors");
+        n = sc.nextInt();
+        int sumfac = 0;
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                sumfac += i;
+                System.out.println(i);
+            }
+        }
+        System.out.println("sum of all factors " + sumfac);
+        //38 solved
+
+        System.out.println("enter a no. for perfect no");
+        n = sc.nextInt();
+        sum = 0;
+        for (int i = 1; i <= n/2; i++) {
+            if (n % i == 0) {
+                sum += i;
+                System.out.println(i);
+            }
+        }
+        if (n == sum)
+            System.out.println("perfect");
+        else
+            System.out.println("not perfect");
+        //39 solved
+        System.out.println("enter no. for separtaion");
+        n = sc.nextInt();
+        while(n!=0){
+            int n1 = n % 10;
+            System.out.println(n1);
+            n = n/10;
+        }// 40 solved
+        System.out.println("41  enter  a no. for checking sum");
+        n = sc.nextInt();
+        while(n!=0){
+            n = n % 10;
+            sum = sum + n;
+            n= n/10 ;
+        }//41 solved
+        System.out.println("sum "+ sum );
+        //-----------------------------------------------
+        System.out.println("42  enter a no. for check wheater it is a prime or not");
+        n=sc.nextInt();
+        int c=0;
+        for(int i=1;i<=n;i++){
+            if(n%i==0)
+                c++;
+
+        }
+        System.out.println( c==2 ?" prime ":" non prime ");
+        //42 solved
+        //------------------------------------------------------
+        int rev=0;
+        System.out.println("enter  a no. for reversal");
+        n = sc.nextInt();
+
+        while(n!=0){
+            temp = n % 10;
+            rev = rev *10 +temp;
+            n= n/10 ;
+        }
+        System.out.println("reversal " + rev);
+        //43 solved---------------------------------------------------------
+
+        rev = 0;
+        System.out.println("enter  a no. for pallindrome");
+        int copy;
+        n = copy = sc.nextInt();
+        while(n!=0){
+            temp = n % 10;
+            rev = rev * 10 + temp;
+            n = n/10 ;
+        }
+        System.out.println("reversal " + rev);
+        System.out.println( rev==copy ? " palindrome ":" not palindrome ");
+        //44 solved
+
+        System.out.println("QN45. please enter a no Armstrong");
+        copy=n=sc.nextInt();
+        do {
+            temp = n%10;
+            double sq = Math.pow(temp,2);
+            sum += sq;
+            n/=10;
+        }while(n!=0);
+        //if (copy==sq)
+//-------------------------------------------------------------------------
+        n=0;//b'cause in switch we need to initialise it
+        System.out.println("please eneter value 1-7 for week");
+        n=sc.nextInt();
+        switch (n) {
+            case 7 ->{
+                System.out.println("sunday");
+                System.out.println("aram krlo bhai");
+            }
+            case 1 -> System.out.println("monday");
+            case 2 -> System.out.println("tuesday");
+            case 3 -> System.out.println("wednesday");
+            case 4 -> System.out.println("thursday");
+            case 5 -> System.out.println("friday");
+            case 6 -> {
+                System.out.println("saturday");
+                System.out.println("enjoy your saturday night");
+            }
+            default -> System.out.println("invalid input");
+        }//52 solved
 
     }
 
