@@ -312,6 +312,15 @@ public class Java150 {
             }
             default -> System.out.println("invalid input");
         }//52 solved
+        long n = 1401601499;
+        long sum = 0;
+        for (int i = 10; i>=1 ; i--) {
+            sum = sum + n % 10 * i;
+            n = n / 10;
+        }
+        System.out.println(sum);
+        System.out.println(sum%11==0?"Legal":"not legal");//26 solved
+
 
     }
 
