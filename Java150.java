@@ -321,6 +321,43 @@ public class Java150 {
         System.out.println(sum);
         System.out.println(sum%11==0?"Legal":"not legal");//26 solved
 
+        //----------bijli -----pending
+        int unit=200;
+        double amt =0;
+        if (unit>400){
+            amt=amt+(unit -400)*13;
+            unit =400;
+        }
+        if (unit>200){
+            amt=amt+(unit-200)*8;
+            unit=200;
+        }
+        if (unit>100){
+            amt=amt+(unit-100)*6;
+            unit=100;
+        }
+        amt=amt+unit*4.2;
+        System.out.println("amt = "+amt);
+    }
+} //24 solved
+
+      /*  int rup= 8751;
+        int note2000 = rup / 2000;
+        int rem2000 = rup % 2000;
+
+        int note500 = rup / 500;
+        int rem500 = rup % 500;
+
+        int note100 = rup / 100;
+        int rem100 = rup % 100;
+
+        int note50 = rup / 50;
+        int rem50 = rup % 50;
+
+        int note10 = rup / 10;
+        int rem10 = rup % 10;
+  */
+
 
     }
 
