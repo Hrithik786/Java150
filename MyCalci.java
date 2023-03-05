@@ -7,7 +7,7 @@ public class MyCalci {
         int a,b,ch;
         do {
             System.out.println("enter a operation:");
-            System.out.println("1. Add\n2.Sub\n3. multiply\n4. divide ");
+            System.out.println("1. Add\n2. Sub\n3. multiply\n4. divide ");
             ch = sc.nextInt();
             if (ch == 1) {
                 System.out.println("Enter a Two nos. to Add");
