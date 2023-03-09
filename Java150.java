@@ -1,5 +1,3 @@
-import jdk.jfr.Description;
-
 import java.util.Scanner;
 public class Java150 {
     public static void main(String[] args) {
@@ -167,7 +165,7 @@ public class Java150 {
         /*
         19- Accept a day number between 1-7 and print the corresponding dayname.
         */
-        int ch = 0;
+        int ch;
         do {
             System.out.println("please enter 1-7 for printing day, Press 8 to terminate");
             ch = sc.nextInt();
@@ -206,7 +204,7 @@ public class Java150 {
         System.out.println("please enter a year to check it is leap year or not");
         int year = sc.nextInt();
         if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0)) {
-            System.out.println("leap yeaR");
+            System.out.println("Leap yeaR");
         } else {
             System.out.println("not leap year");
         }//21 solved
@@ -222,23 +220,39 @@ public class Java150 {
         41-50           DD
         <=40           F
         */
-
+        System.out.println("please enter your marks upto 100 to know your grade");
+        n=sc.nextInt();
+        if (n>90 && n<100)
+            System.out.println("AA");
+        else if (n>80 && n<=90) {
+            System.out.println("AB");
+        } else if (n>70 && n<=80) {
+            System.out.println("BB");
+        } else if (n>60 && n<=70) {
+            System.out.println("BC");
+        } else if (n>50 &&  n<=60){
+            System.out.println("CD");
+        } else if (n>40 && n<=50) {
+            System.out.println("DD");
+        } else System.out.println("Fail");
+        //22 solved
         /*
         23- Shop discount - Description on Graphic
         */
-        System.out.println("enter amount for Discount on Shop");
+        System.out.println("Enter Amount for Discount on Shop");
         int amt = sc.nextInt();
         if (amt > 0 && amt <= 5000) {
-            System.out.println("payable amout" + (amt * 0 / 100));
-        } else if (amt > 5000 && amt <= 7000) {//5%
-            System.out.println("payable amout" + (amt * 95 / 100));
-        } else if (amt > 7000 && amt <= 9000) {//8%
+            System.out.println("payable amount " + amt);
+        }else if (amt > 5000 && amt <= 7000) {//5%
+
+            System.out.println("payable amount " + (amt * 95 / 100));
+        }else if (amt > 7000 && amt <= 9000) {//8%
+            System.out.println("payable amount "+ (amt * 92 / 100));
         } else if (amt > 9000 && amt <= 10000)//10%
-            System.out.println("payable amout" + (amt * 90 / 100));//pending
+            System.out.println("payable amount" + (amt * 90 / 100));//pending
         //23 solved
 
         //24- Bijli Bill - Description on Graphic
-
         System.out.println("please Enter Unit for Calculating Electricity Bill");
         int unit = sc.nextInt();
         amt = 0;
@@ -274,7 +288,6 @@ public class Java150 {
          */
 
         //27- Accept an english alphabet from user and check if it is a consonant or a vowel;
-
         System.out.println("please Enter Alphabet to check either it is consonant or vowel");
         a = sc.next().charAt(0);
         if (a == 'a' || a == 'e' || a == 'i' || a == 'o' || a == 'u') {
@@ -282,17 +295,13 @@ public class Java150 {
         } else {
             System.out.println("consonant");
         }//27solved
-
         /*
         28- Accept two numbers from user and swap their values
         */
-
         System.out.println("please enter 2 value :");
         a = sc.nextInt();
         b = sc.nextInt();
-
         System.out.println("before swapping " + a + "  " + b + "\n");
-
         c = a;
         a = b;
         b = c;
@@ -302,28 +311,25 @@ public class Java150 {
         a = a + b;//logic
         b = a - b;
         a = a - b;
-
         System.out.println("after swapping " + a + "  " + b + "\n");
         //28 solved
 
         //just for fun
         System.out.println("enter an int for loop");
-        int th = sc.nextInt();
-        for (int i = 1; i <= n; i++) {
+        n = sc.nextInt();
+        for (int i = 0; i <= n; i++) {
             System.out.println("hy brada " + i);
         }
 
         //29- Accept an integer and Print hello world n time
-
         System.out.println("please enter how many times you want hello world");
         n = sc.nextInt();
         for (int i = 1; i <= n; i++) {
-            System.out.println("hello world" + n);
+            System.out.println("hello world" + i);
         }
         //29 solved
 
         //30- Print natural number up to n.
-
         System.out.println("please enter int where till want to print no.");
         n = sc.nextInt();
         for (int i = 1; i <= n; i++) {
@@ -332,7 +338,6 @@ public class Java150 {
         //30 solved
 
         //31- Reverse for loop. Print n to 1.
-
         for (int i = n; i > 0; i--) {
             System.out.println(" reversal numbers= " + i);
         }
@@ -350,8 +355,7 @@ public class Java150 {
         //32 solved
 
         //33- Sum up to n terms.
-
-        System.out.println("please enter a value for n for sum");
+        System.out.println("please enter a value where till you want to sum");
         n = sc.nextInt();
         sum = 0;
         for (int i = 1; i <= n; i++) {
@@ -387,7 +391,6 @@ public class Java150 {
         //35 solved
 
         //36- Print all the numbers which are either divisible by 3 or 5 in a range
-
         System.out.println("please Enter value for 3 or 5 divisibility");
         n = sc.nextInt();
         for (int i = 1; i <= n; i++) {
@@ -397,7 +400,6 @@ public class Java150 {
         //36 solved
 
         //37- Print all the factors of a number.
-
         System.out.println("enter a Value for factors");
         n = sc.nextInt();
         for (int i = 1; i <= n; i++) {
@@ -407,7 +409,6 @@ public class Java150 {
         //37 solved
 
         //38- Print the sum of all factors of a number, 50 - 1 + 2 + 5 + 10 + 25 = 43
-
         System.out.println("enter a sum of ranged factors");
         n = sc.nextInt();
         int sumfac = 0;
@@ -424,11 +425,10 @@ public class Java150 {
         // A number whose sum of factors(excluding number itself)  = Number
         Ex -  6 = 1, 2, 3 = 6
          */
-
         System.out.println("enter a no. for perfect no");
         n = sc.nextInt();
         sum = 0;
-        for (int i = 1; i <= n / 2; i++) {
+        for (int i = 1; i <= n/2; i++) {
             if (n % i == 0) {
                 sum += i;
                 System.out.println(i);
@@ -441,8 +441,7 @@ public class Java150 {
         //39 solved
 
         //40- Separate each digit of a number and print it on the new line
-
-        System.out.println("enter no. for separataion");
+        System.out.println("40. enter no. for separation");
         n = sc.nextInt();
         while (n != 0) {
             int n1 = n % 10;
@@ -452,8 +451,9 @@ public class Java150 {
         // 40 solved
 
         //41- Sum of digits of a number, 936 = 18
-        System.out.println("41  enter  a no. for checking sum");
-        int checknum =n= sc.nextInt();
+        System.out.println("41. enter  a no. for checking sum");
+        n=sc.nextInt();
+        int checknum=n;
         sum=0;
         while (n != 0) {
             checknum = n % 10;
