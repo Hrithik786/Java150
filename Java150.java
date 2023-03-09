@@ -14,7 +14,7 @@ public class Java150 {
         Ex - The sum of 45 & 12  = 57
         */
 
-        System.out.println("sum of " + a + " & " + b + " = " + sum);//2 solved
+        System.out.println("the sum of " + a + " & " + b + " = " + sum);//2 solved
 
         /*
         3- Accept two integers from user and print the sum
@@ -25,8 +25,8 @@ public class Java150 {
         System.out.println("please enter Two Integers:");
         int c = sc.nextInt();
         int d = sc.nextInt();
-        int sum2 = c + d;
-        System.out.println("the sum of " + c + " & " + d + " is " + sum2);//3solved
+        sum = c + d;
+        System.out.println("the sum of " + c + " & " + d + " is " + sum);//3solved
 
         /*
         4- Accept the User's name, age and print in following manner
@@ -53,34 +53,28 @@ public class Java150 {
         //6- Solve Increment & decrement operator questions on
         //	https://javaconceptoftheday.com/quiz-on-increment-and-decrement-operators/
 
-        /*7- Accept the marks of Robert in three subjects Maths, Computer, English respectively (each out of 100 ),
+        /*
+        7- Accept the marks of Robert in three subjects Maths, Computer, English respectively (each out of 100 ),
         Write a program to calculate his total marks and percentage marks.
         */
 
         int math, computer, english;
-        do {
-            System.out.println("hello ROBERT please enter your marks MATH COMPUTER ENGLISH RESPECTIVELY(Each Out of 100)");
+            System.out.println("Hello ROBERT please enter your marks MATH COMPUTER ENGLISH RESPECTIVELY(Each Out of 100)");
             math = sc.nextInt();
-        } while (math > 100);
-        System.out.println("please enter valid INPUT UPTO 100");
-        computer = sc.nextInt();
-        if (computer > 100)
-            System.out.println("please enter valid INPUT UPTO 100");
-        english = sc.nextInt();
-        if (english > 100)
-            System.out.println("please enter valid INPUT UPTO 100");
-        System.out.println("total =" + (math + computer + english) + "percentage =" + ((math + computer + english) / 3.0 * 100));//7solved
-        // pending to repair
+            computer = sc.nextInt();
+            english = sc.nextInt();
+        System.out.println("total =" + (math + computer + english) + "percentage =" + ((math + computer + english)/3.0));
+        //7solved
         //8Fahrenheit & convert into Celsius.
         /*
         9- Accept the Principle amount, time & rate of interest and calculate the Simple Interest
         */
 
         System.out.println("SIMPLE INTREST !please enter PRINCIPLE,RATE(only int values) AND TIME(yearly) ");
-        int principle = sc.nextInt();
+        int principal = sc.nextInt();
         int rate = sc.nextInt();
         int time = sc.nextInt();
-        System.out.println("SIMPLE INTREST = " + ((principle * rate * time) / 100.0));//9solved
+        System.out.println("SIMPLE INTREST = " + ((principal * rate * time) / 100.0));//9solved
 
         /* 10- Take 3 int inputs from user and check and print the result.
         all are equal
@@ -103,10 +97,7 @@ public class Java150 {
         /*
         11- Accept two numbers and print the greatest between them
         already done with 3 inputs
-         */
-        //qn11 pending
 
-        /*
         12- Accept the gender from the user as char and print the respective greeting message
         Ex - Good Morning Sir (on the basis of gender)
 
@@ -159,12 +150,13 @@ public class Java150 {
         16- Accept the parameters and calculate the Compound Interest & print it on STDOUT (Use Math class methods)
         */
 
-        System.out.println("please enter principle rate time(respectively) for compound Intrest ");
-        int cprinci = sc.nextInt();
-        int crate = sc.nextInt();
-        int ctime = sc.nextInt();
-        double CI = Math.pow((cprinci * (100 + crate / 100)), ctime);
-        System.out.println("Compund Intrest = " + CI);//check it once not working properly
+        System.out.println("please enter principal rate time(respectively) for compound Intrest ");
+        double cprincipal = sc.nextInt();
+        double crate = sc.nextInt();
+        double ctime = sc.nextInt();
+        double camount = cprincipal*(Math.pow(( 1 + crate / 100),ctime));
+        System.out.println("Compound Intrest = " + (camount-cprincipal));
+        //16 solved
 
         /*
         17- Accept the three sides of triangle and calculate the area using herons formula
@@ -177,7 +169,7 @@ public class Java150 {
         */
         int ch = 0;
         do {
-            System.out.println("please enter 1-7 for printing day");
+            System.out.println("please enter 1-7 for printing day, Press 8 to terminate");
             ch = sc.nextInt();
             switch (ch) {
                 case 1 -> System.out.println("monday");
@@ -189,7 +181,7 @@ public class Java150 {
                 case 7 -> System.out.println("sunday");
                 default -> System.out.println("please enter valid input");
             }
-        } while (ch != 7);
+        } while (ch != 8);
         //19 solved
 
         /*
