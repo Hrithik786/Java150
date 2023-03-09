@@ -536,7 +536,6 @@ public class Java150 {
         System.out.println( copy == sum ? "Armstrong Number": "NON Armstrong Number");
         //46 solved
 
-
         //52- Choice based Weedays
         System.out.println("please enter value 1-7 for week");
         n = sc.nextInt();
@@ -556,7 +555,6 @@ public class Java150 {
             }
             default -> System.out.println("invalid input");
         }//52 solved
-
 
         /*
         long n = 1401601499;
