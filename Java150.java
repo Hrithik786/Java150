@@ -567,21 +567,22 @@ public class Java150 {
         System.out.println(sum%11==0?"Legal":"not legal");//26 solved
 */
      //   denomination
-      /*  int rup= 8751;
-        int note2000 = rup / 2000;
-        int rem2000 = rup % 2000;
+        amt= 8751;
+        int note2000 = amt / 2000;
+        amt = amt % 2000;
 
-        int note500 = rup / 500;
-        int rem500 = rup % 500;
+        int note500 = amt / 500;
+        amt += amt % 500;
 
-        int note100 = rup / 100;
-        int rem100 = rup % 100;
+        int note100 = amt / 100;
+        amt += amt % 100;
 
-        int note50 = rup / 50;
-        int rem50 = rup % 50;
+        int note50 = amt / 50;
+        amt += amt % 50;
 
-        int note10 = rup / 10;
-        int rem10 = rup % 10;
-  */
+        int note10 = amt / 10;
+        amt += amt % 10;
+
+        System.out.println(note2000+" "+note500+" "+note100+" "+note50+" "+note10+" "+amt);
     }
 }
