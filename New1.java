@@ -67,5 +67,13 @@ public class New1 {
         System.out.println();
         System.out.println();
 
+        for (r=1;r<=n;r++){ //ulta wala triangle
+            for (c =1; c<=r+1-c; c++) {
+                System.out.print((char)(64+r));
+            }
+            System.out.println();
+        }
+        System.out.println();
+        System.out.println();
     }
 }
