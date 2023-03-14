@@ -29,26 +29,43 @@ public class New1 {
             amt+=150;
             case 1-> System.out.println("");
         }*/
+        //pattern printing
+        int n=10;
+        int c=1;
+        int r=1;
 
-        int n=128,rem;
-        boolean ans=true;
-
-        while (n!=0){
-        rem = n % 10;
-        if(rem==0) System.out.println("not divisible no.");
-        else if (n % rem !=0) {
-            ans = false;
-            break;
-        }
-        n=n/10;
-        }
-        System.out.println(ans);
-        n=10;
-        for (int r=0; r<=n; r++ ){
-            for (int c = 0; c <= n; c++) {
+        for (r=1;r<=n;r++){ //square
+            for (c =1; c <= n; c++) {
                 System.out.print("* ");
             }
             System.out.println();
         }
+        System.out.println();
+        System.out.println();
+        for (r=n;r>=1;r--){ //ulta wala triangle
+            for (c =1; c<=r; c++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        System.out.println();
+        for (r=1;r<=n;r++){ //sidha wala triangle
+            for (c =1; c<=r; c++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        System.out.println();
+        for (r=1;r<=n;r++){ //ulta wala triangle
+            for (c =1; c<=r+1-c; c++) {
+                System.out.print((char)(64+r));
+            }
+            System.out.println();
+        }
+        System.out.println();
+        System.out.println();
+
     }
 }
