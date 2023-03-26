@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class DSA {
@@ -66,6 +67,51 @@ public class DSA {
         }
         System.out.println("Array is "+ans+ "ly" +" sorted");
 
-        //pend Array Reverse Using Extra space
+        //bug Array Reverse Using Extra space
+        int[] temp = new int[arr4.length];   //2 pointer algorithm
+        for (int i = arr4.length-1; i >= 0 ; i--) {
+            for (int j = 0; j < temp.length-1; j++) {
+                temp[j] = arr4[i];
+            }
+        }
+        for (int data : temp) {
+            System.out.println(data+" ");
+         }
+        //rotate array left by 1
+        int left[]={1,2,3,4,5};
+        int t=left[0];
+        for (int i = 0; i < left.length-1; i++) {
+            left[i] = left[i+1];
+        }
+        left [left.length-1] = t;
+        System.out.println(Arrays.toString(left));
+        for ( int data : left) {
+            System.out.print(data + " ");
+        }
+        //----------------- pend
+
+        int[] rot={1,2,3,4,5};
+        int k=4000;
+        k= k % rot.length;
+        for (int i = 0; i < rot.length ; i++);
+    //---------------------------------
+        int swap[] = {1,2,3,4,5};   //inspace +auxilliary space
+        int i=0, j = swap.length-1;
+        System.out.println("before " + Arrays.toString(swap));
+        while(i<j){
+
+            int temp1 = swap[i];
+            swap[i]=swap[j];
+            swap[j]=temp1;
+            i++;
+            j--;
+        }
+        System.out.println("After " + Arrays.toString(swap));
+
+        //linear search
+
+
     }
+
 }
+
