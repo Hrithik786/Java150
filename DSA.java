@@ -5,7 +5,7 @@ public class DSA {
     public static void main(String[] args) {
         Scanner sc;  //creating a reference pointer
         sc = new Scanner(System.in);
-
+/*
         System.out.println("please enter size for array");
         int s = sc.nextInt(); //Input
 
@@ -88,30 +88,46 @@ public class DSA {
         for ( int data : left) {
             System.out.print(data + " ");
         }
-        //----------------- pend
+        //----------------- pending
 
         int[] rot={1,2,3,4,5};
         int k=4000;
         k= k % rot.length;
         for (int i = 0; i < rot.length ; i++);
     //---------------------------------
-        int swap[] = {1,2,3,4,5};   //inspace +auxilliary space
-        int i=0, j = swap.length-1;
+        int swap[] = {1,2,3,4,5};   //inspace +auxilliary space also called as Inspace Algorithm
+         int i=0, j = swap.length-1;
         System.out.println("before " + Arrays.toString(swap));
         while(i<j){
-
             int temp1 = swap[i];
             swap[i]=swap[j];
             swap[j]=temp1;
             i++;
             j--;
+
         }
         System.out.println("After " + Arrays.toString(swap));
 
         //linear search
+        */
 
-
+        //binary search
+        int arr[]={12,25,56,68,69,64,89,95};
+        int start=0, end= arr.length-1;
+        int midindex = (start+end)/2;
+        int target=89;
+        int ans = -1;
+        while (start <= end){
+            if (target == arr[midindex]) {
+                ans = midindex;
+                break;
+            }
+            if (target > arr[midindex])
+                start = midindex + 1;
+            else
+                end = midindex-1;
+            }
+        System.out.println("(Binary search)answer is " +arr[ans]);
+        }
     }
-
-}
 
