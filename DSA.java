@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class DSA {
     public static void main(String[] args) {
-        Scanner sc;  //creating a reference pointer
+      Scanner sc;  //creating a reference pointer
         sc = new Scanner(System.in);
-/*
+
         System.out.println("please enter size for array");
         int s = sc.nextInt(); //Input
 
@@ -95,7 +95,7 @@ public class DSA {
         k= k % rot.length;
         for (int i = 0; i < rot.length ; i++);
     //---------------------------------
-        int swap[] = {1,2,3,4,5};   //inspace +auxilliary space also called as Inspace Algorithm
+        int swap[] = {1,2,3,4,5};   //Inspace + auxilliary space also called as Inspace Algorithm
          int i=0, j = swap.length-1;
         System.out.println("before " + Arrays.toString(swap));
         while(i<j){
@@ -109,25 +109,34 @@ public class DSA {
         System.out.println("After " + Arrays.toString(swap));
 
         //linear search
-        */
+
+
+
 
         //binary search
-        int arr[]={12,25,56,68,69,64,89,95};
-        int start=0, end= arr.length-1;
+        System.out.println("hello");
+
+        int array[]={12,25,56,68,69,64,89,95};
+        int start =0 , end = array.length-1;
         int midindex = (start+end)/2;
         int target=89;
-        int ans = -1;
-        while (start <= end){
-            if (target == arr[midindex]) {
-                ans = midindex;
+        int answer = -1;
+        while (start < end){
+            if (target==arr[start]) {
+                answer = start;
                 break;
             }
-            if (target > arr[midindex])
+            if (target == array[midindex]) {
+                    answer = midindex;
+                    break;
+                }
+            }
+            if (target > array[midindex])
                 start = midindex + 1;
             else
                 end = midindex-1;
             }
-        System.out.println("(Binary search)answer is " +arr[ans]);
+ //       System.out.println("(Binary search)answer is " +array[answer]);
+   //     System.out.println("hello bhai madad krdo");
         }
-    }
 
