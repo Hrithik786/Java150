@@ -617,4 +617,28 @@ public class Java150 {
             .toString()
             .equals(str)
         ).forEach(System.out::println);
+
+        //find occurancies 
+        String findOccurencies = "The quick brown fox jumps over the lazy dog";
+
+        Map<Character, Integer> freqMap = new HashMap<>();
+
+        for( char ch : findOccurencies.toCharArray()){
+            freqMap.put( ch, freqMap.getOrDefault( ch, 0 ) +1 );
+        }
+
+        System.out.println(freqMap);
+
+        //Qn findDuplicates
+        int[] findDuplicates = {2,2,3,4,1,1,45,54,45};
+        
+        HashSet<Integer> unique = new HashSet<>();
+        
+        for( int i : findDuplicates){
+            if(!unique.add(i)){
+                System.out.println("duplicate: " + i);
+            }
+        }
+        
+
 }
