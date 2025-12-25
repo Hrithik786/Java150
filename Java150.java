@@ -170,7 +170,11 @@ public class Java150 {
             System.out.println("please enter 1-7 for printing day, Press 8 to terminate");
             ch = sc.nextInt();
             switch (ch) {
-                case 1 -> System.out.println("monday");
+                case 1 : { 
+                    System.out.println("monday");
+                    break;
+                    } // in traditional syntax we have to write break at the end of stmt other 
+                    // the other obove stmts gonna execute
                 case 2 -> System.out.println("tuesday");
                 case 3 -> System.out.println("wednesday");
                 case 4 -> System.out.println("thursday");
@@ -317,7 +321,7 @@ public class Java150 {
         //just for fun
         System.out.println("enter an int for loop");
         n = sc.nextInt();
-        for (int i = 0; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             System.out.println("hy brada " + i);
         }
 
@@ -549,10 +553,10 @@ public class Java150 {
                 System.out.println("saturday");
                 System.out.println("enjoy your saturday night");
             }
-            case 7 -> {
+            case 7 :
                 System.out.println("sunday");
                 System.out.println("ARAM krlo bhai");
-            }
+                break; //in lamba's break doesn't required, but in old traditional case break; required
             default -> System.out.println("invalid input");
         }//52 solved
 
@@ -585,4 +589,32 @@ public class Java150 {
 
         System.out.println(note2000+" "+note500+" "+note100+" "+note50+" "+note10+" "+amt);
     }
+
+    // Anagram Qn
+     String s1 = "listen";
+        String s2 = "silent";
+
+        if (s1.length() != s2.length()) {
+            System.out.println("Not Anagram");
+            return;
+        }
+
+        char[] a1 = s1.toCharArray();
+        char[] a2 = s2.toCharArray();
+
+        Arrays.sort(a1);
+        Arrays.sort(a2);
+
+        System.out.println(Arrays.equals(a1, a2) ? "Anagram" : "Not Anagram");
+        
+        // list of String and filter only palindrome strings 
+
+        List<String> names = Arrays.asList("hri","ana","ama","nana");
+        names.stream()
+        .filter( str -> 
+            new StringBuilder(str)
+            .reverse()
+            .toString()
+            .equals(str)
+        ).forEach(System.out::println);
 }

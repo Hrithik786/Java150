@@ -140,13 +140,13 @@ public class PatternPrinting {
         int[] arr = new int[n];
         //arr is basically a reference variable
 
-        for (i=0; i < arr.length ;i++) {
+        for (i=0; i < arr.length; i++) {
             System.out.println("\nenter element "+i+"th index");
             arr[i] = sc.nextInt();
         }//input
 
         int sum=0,mean=0;
-        for(i=0; i < arr.length ;i++) {
+        for(i=0; i < arr.length; i++) {
             sum = sum + arr[i];
         }//sum
 
@@ -171,7 +171,7 @@ public class PatternPrinting {
         System.out.println("mean = "+(float)sum/n);
 
         //74
-        int crr[] = {12,25,236,56,89,8,99,};
+        int crr[] = {12,25,236,56,89,8,99,909};
         int max =0;
         for (int j = 1; j < crr.length; j++) {
             if (crr[i] > crr[max]) {
@@ -180,20 +180,22 @@ public class PatternPrinting {
         }
         System.out.println("max element "+crr[max]+" found at "+max);
         //-------------------------------------------
-
+         
         int[] xrr= {2,96,69,77,145,20};
-        int first  = Math.max(xrr[0],xrr[1]);
-        int second = Math.min(xrr[0],xrr[1]);
+        int firstMax  = Math.max(xrr[0], xrr[1]);
+        int secondMax = Math.min(xrr[0], xrr[1]);
 
         for (int j = 2; j < xrr.length; j++) {
-            if (xrr[j] >first){
-                second = first;
-                first  = xrr[j];
-            } else if (xrr[j] > second) {
-                second=arr[j];
+            if (xrr[j] > firstMax){
+                secondMax = firstMax;
+                firstMax  = xrr[j];
+            } else if (xrr[j] > secondMax) {
+                secondMax=xrr[j];
             }
         }
-        System.out.println("second greatest = "+second);
+        System.out.println("second greatest = "+secondMax);
+        
+        Arrays.stream(xrr).boxed().sorted(Comparator.reverseOrder()).skip(2).limit(1).forEach(System.out::println);
 //------------------------------------------------------
         /*
         int[] hrr={1,5,7,8,9};
@@ -207,17 +209,17 @@ public class PatternPrinting {
         System.out.println(answ);
         */
         //-------------------------------------
-        int[] array = {1,2,3,4,5,6};
+        int[] array = {1, 2, 1};
         int[] temp = new int[array.length];
 
-        for (int in = array.length-1,j=0;  in >= 0;    ){
-            temp[j++]=array[i--];
+        for (int i = array.length - 1, j = 0; i >= 0; i--, j++) {
+            temp[j] = array[i];
         }
 
         System.out.println(Arrays.toString(temp));
-
-        for (int data : temp) {
-            System.out.println(data  +   "   ");
-        }
+        System.out.println(Arrays.toString(array));
+        
+        System.out.println(
+            Arrays.equals(array, temp) ? "palindrome" : "non plaindrome");
     }
 }
