@@ -674,5 +674,17 @@ public class Java150 {
         }
 
         System.out.println("No Equilibrium Index");
+
+        //panagram
+        String s = "The quick brown fox jumps over the lazy dog".toLowerCase();
+        Set<Character> set = new HashSet<>();
+
+        for (char c : s.toCharArray()) {
+            if (c >= 'a' && c <= 'z') {
+                set.add(c);
+            }
+        }
+
+        System.out.println(set.size() == 26 ? "Pangram" : "Not Pangram");
     }
 }
