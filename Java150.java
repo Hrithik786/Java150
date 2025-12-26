@@ -639,6 +639,40 @@ public class Java150 {
                 System.out.println("duplicate: " + i);
             }
         }
-        
 
+        List<Integer> dups = Arrays.stream(findDuplicates)
+                            .filter( n -> !unique.add(n))
+                            .boxed() //converts int -> Integer
+                            .collect(Collectors.toList());
+        System.out.println(dups);
+
+
+
+//equilibrium index TCS
+
+        int[] arr = {1, 3, 5, 2, 2};
+        int n = arr.length;
+
+        for (int i = 0; i < n; i++) {
+            int leftSum = 0;
+            int rightSum = 0;
+
+            // calculate left sum
+            for (int j = 0; j < i; j++) {
+                leftSum += arr[j];
+            }
+
+            // calculate right sum
+            for (int j = i + 1; j < n; j++) {
+                rightSum += arr[j];
+            }
+
+            if (leftSum == rightSum) {
+                System.out.println("Equilibrium Index: " + i);
+                return;
+            }
+        }
+
+        System.out.println("No Equilibrium Index");
+    }
 }
