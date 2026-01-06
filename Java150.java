@@ -537,7 +537,7 @@ public class Java150 {
             sum += fact;
             n /= 10;
         }
-        System.out.println( copy == sum ? "Armstrong Number": "NON Armstrong Number");
+        System.out.println( copy == sum ? "STRONG Number": "NON STRONG Number");
         //46 solved
 
         //52- Choice based Weedays
